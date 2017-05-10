@@ -1,0 +1,20 @@
+{
+    "name": "topcu/laravelimap",
+    "description": "Laravel wrapper for php-imap",
+    "require": {
+        "php-imap/php-imap": "^2.0",
+        "illuminate/support": "5.1.*|5.2.*|5.3.*|5.4.*"
+    },
+    "authors": [
+        {
+            "name": "H. Cagri TOPCU",
+            "email": "hctopcu@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Topcu\\LaravelImap\\": "src/"
+        }
+  },
+    "minimum-stability": "dev"
+}
