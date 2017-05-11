@@ -26,13 +26,34 @@ Otherwise, you can call `Imap::connection()` anytime with config parameters as:
 
 
 ### Usage examples
-#### Using service configuration
+#### Using Facade
 ```
     $mail_ids = Imap::searchMailbox("UNSEEN");
     $mail = Imap::getMail($mail_ids[0]);
 ```
 
-### Using dynamic connection
+
+
+#### Using IoC
+
+```
+use Topcu\LaravelImap\Mailbox;
+
+class Foo
+{
+    //...
+    public function bar(Mailbox $imap)
+    {
+        $mail_ids = $imap->searchMailbox("UNSEEN");
+        $mail = $imap->getMail($mail_ids[0]);
+    }
+    //...
+}
+
+```
+
+
+### Setting connection parameters dynamically
 ```
     $mail_ids = Imap::connection($imap_config)->searchMailbox("UNSEEN");
     $mail = Imap::getMail($mail_ids[0]);

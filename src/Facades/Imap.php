@@ -12,5 +12,5 @@ class Imap extends Facade
      *
      * @return string
      */
-    protected static function getFacadeAccessor() { return "imap"; }
+    protected static function getFacadeAccessor() { return "Topcu\\LaravelImap\\Mailbox"; }
 }

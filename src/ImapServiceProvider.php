@@ -23,7 +23,7 @@ class ImapServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton("imap", function () {
+        $this->app->singleton("Topcu\\LaravelImap\\Mailbox", function () {
             return new Mailbox(config("services.imap"));
         });
     }
