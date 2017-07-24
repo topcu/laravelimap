@@ -1,8 +1,22 @@
 # Laravel Wrapper for [Php-Imap](https://github.com/barbushin/php-imap)
 
-### Installation by Composer
+### Installation
 
 	$ composer require php-imap/php-imap
+	
+Add following lines into `config/app.php`
+```
+    'providers' => [
+    	...
+	Topcu\Dumber\DumberServiceProvider::class,
+	...
+    ],
+    'aliases' => [ 
+    	...
+	'Imap' => \Topcu\LaravelImap\Facades\Imap::class,
+	...
+    ],
+```
 
 ### Configuration
 
