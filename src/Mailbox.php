@@ -55,5 +55,6 @@ class Mailbox extends PhPImapMailbox{
             }
             $this->attachmentsDir = rtrim(realpath($attachments_dir), '\\/');
         }
+        return $this;
     }
 }
